@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <style>
+
+        @@media print {
+            h1 {
+                page-break-before: always;
+            }
+        }
+        @@font-face {
+            font-family: IDAutomationHC39M;
+            src: url(@Model.Server/IDAutomationHC39M.woff);
+        }
+
+        body {
+            width: 98%;
+    /*        background: #fbfbeb;*/
+            font-family: 'Inconsolata', monospace;
+        }
+
+        #dataTable {
+
+            font-family: 'Inconsolata', monospace;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #dataTable th {
+                border-top: 1px solid #000000;
+                border-bottom: 1px dashed #000000;
+                padding: 4px;
+            }
+
+            #dataTable td {
+                border-bottom: 1px solid #000000;
+                padding: 2px 8px 2px 8px;
+            }
+
+            /*#customers tr:nth-child(even){background-color: #f2f2f2;}*/
+
+            /*#customers tr:hover {background-color: #ddd;}*/
+
+            #dataTable th {
+                text-align: left;
+                color: #000000;
+            }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        #head_table {
+
+         /* top=1em, right=2em, bottom=3em, left=2em */
+        }
+
+            #head_table td {
+                padding: 2px 2px 2px 2px;
+            }
+
+        .centerImg {
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <div>
+
+            @*<td style="padding: 8px 8px 8px 8px;"><img src="http://localhost:44317@(Model.School.school_logo)" alt="Image" /></td>*@
+            <div class="centerImg" style="padding-top:40px;margin-bottom:0px;padding-bottom:0px;">
+                <img src="@(Model.Server+Model.Client.logo)" alt="Image" />
+            </div>
+            <div style="text-align:center; font-size:30px ;">
+                @*<h1>@Model.School.school_name</h1>*@
+                <strong>@Model.Client.name</strong>
+
+            </div>
+            <div style="text-align:center; font-size:12px ;">
+                @Model.Client.address, @Model.Client.thana, @Model.Client.district - @Model.Client.zipcode
+            </div>
+
+
+
+            <!--<table align="center">-->
+            @*<tr><td style="text-align:center; font-size:15px ;"> @Model.School.address, @Model.School.thana, @Model.School.district - @Model.School.zip_code  </td></tr>*@
+            <!--<tr><td style="text-align:center; font-size:12px ;"> 49 WEST VIEW ROAD, KAWRAN BAZAR, DHAKA - 1215  </td></tr>
+        </table>-->
+
+            <table id="head_table" style=" border-top: 1px dashed #000;  width: 100%; color: black;">
+                <tr>
+                    <td><strong> Invoice No.: </strong>     @Model.SaleList.invoice</td>
+
+
+                </tr>
+            </table>
+
+        </div>
+        <div style=" text-align: right;">
+            <strong> Date : </strong> @Model.SaleList.entry_date.ToString("dd/MM/yyyy")
+        </div>
+        <div style=" text-align: right;">
+            <strong> Time : </strong> @Model.EntryTime
+        </div>
+
+        <table id="head_table">
+            <tr>
+                <td><strong> Name:</strong></td>
+                <td>@Model.User.first_name</td>
+
+            </tr>
+        </table>
+
+   
+
+        <table id="dataTable" style="font-size:15px;">
+
+            <tr>
+
+                <th>Item Name</th>
+
+                <th style="text-align:right;">Price</th>
+                <th style="text-align:right;">Qty.</th>
+                <th style="text-align:right;">Disc.(%)</th>
+                <th style="text-align:right;">T.Price</th>
+
+
+            </tr>
+
+            @foreach (var s in @Model.SaleList.sales_list)
+            {
+                <tr style="font-size:16px;">
+                    <td >@s.product_name</td>
+                    <td style="text-align:right;">@s.mrp_price</td>
+                    <td style="text-align:right;">@s.quantity</td>
+                    <td style="text-align:right;">@s.discount</td>
+                    <td style="text-align:right;">@s.total_price</td>
+
+                </tr>
+            }
+
+
+            <tr style="border-top:2px double; border-bottom:1px dashed;">
+                <td style="text-align:left" colspan="4"><strong>GROSS TOTAL : </strong></td>
+
+
+                <td style="text-align:right;" colspan="1"><strong>@Model.SaleList.total</strong></td>
+
+            </tr>
+            <tr style="border-top:1px dashed; border-bottom:1px dashed;">
+                <td style="text-align:left" colspan="4"><strong>DISCOUNT(@Model.SaleList.discount_p%) : </strong></td>
+
+
+                <td style="text-align:right;" colspan="1"><strong>@Model.SaleList.discount</strong></td>
+
+            </tr>
+            <tr style="border-top:1px dashed; border-bottom: 0px;">
+                <td style="text-align:left; border-bottom: 0px;" colspan="4"><strong>GRAND TOTAL : </strong></td>
+
+                <td style="text-align:right;  border-bottom: 0px;" colspan="1"><strong>@Model.SaleList.grand_total</strong></td>
+
+            </tr>
+            <tr style="border-top:1px dashed; border-bottom: 0px;">
+                <td style="text-align:left; border-bottom: 0px;" colspan="4"><strong>PAID: </strong></td>
+
+
+                <td style="text-align:right;  border-bottom: 0px;" colspan="1"><strong>@Model.SaleList.payment</strong></td>
+
+            </tr>
+            <tr style="border-top:1px dashed; border-bottom: 0px;">
+                <td style="text-align:left; border-bottom: 0px;" colspan="4"><strong>DUE: </strong></td>
+
+
+                <td style="text-align:right;  border-bottom: 0px;" colspan="1"><strong>@Model.SaleList.due</strong></td>
+
+            </tr>
+            <tr style="border-top:1px dashed; border-bottom: 0px;">
+                <td style="text-align:left; border-bottom: 0px;" colspan="4"><strong>PAYMENT METHOD: </strong></td>
+
+
+                <td style="text-align:right;  border-bottom: 0px;" colspan="1"><strong>@Model.Method.transaction_type</strong></td>
+
+            </tr>
+        </table>
+        <p style="font-size:22px ; font-family: IDAutomationHC39M; text-align:center; align-content:center;">*@Model.SaleList.invoice*</p>
+
+        <hr style="width:100%; border-top:dashed 1px;" />
+        <p style="text-align:center;">Powered by: NICE POWER & IT SOLUTION Ltd.</p>
+     
+    </div>
+    
+</body>
+</html>
