@@ -1,0 +1,141 @@
+._heartbeat{
+  animation: heartbeat 2s infinite 1s;
+}
+
+@keyframes heartbeat {
+  0% {transform: scale( .75 )}
+  10% {transform: scale( 1 )}
+  20% {transform: scale( .75 )}
+  30% {transform: scale( 1 )}
+  40% {transform: scale( .75 )}
+  100% {transform: scale( .75 )}
+}
+
+
+.dealWithIt::after {
+  height: 300px;
+  width: 300px;
+  z-index: 5;
+  background-repeat: no-repeat;
+  content: '';
+  background: url('http://www.stickpng.com/assets/thumbs/584999a27b7d4d76317f5ffe.png');
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom center;
+  animation-name: dealWithIt;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  vertical-align: baseline;
+  position: absolute;
+  top: -200%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+
+}
+
+._dealWithIt {
+  /*position: absolute;*/
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom center;
+  animation-iteration-count: infinite;
+  animation-name: dealWithItNorm;
+  animation-duration: 5s;
+}
+
+@keyframes dealWithIt {
+  1% {
+    transform: translate3d(0,0,0) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translate3d(0,160px,0) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: translate3d(0,160px,0) scale(1);
+    opacity: 1;
+  }
+  85% {
+    transform: translate3d(0,160px,0) scale(1);
+    opacity: 1;
+  }
+  99% {
+    transform: translate3d(0,-2000px,0) scale(1);
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes dealWithItNorm {
+  1% {}
+  30% {
+    transform: translate3d(0,0px,0) scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(10deg);
+    opacity: 1;
+  }
+  50% { transform: rotate(-10deg); }
+  60% { transform: rotate(10deg); }
+  70% { transform: rotate(-10deg); }
+  80% { transform: rotate(0deg); }
+}
+
+
+
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRightTiny {
+  0% {
+    opacity: 0;
+    transform: translate3d(30%, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInRightTiny {
+  0% {
+    opacity: 0;
+    transform: translate3d(30%, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRightTiny {
+  animation-name: fadeInRightTiny;
+}
+
+@keyframes slideInRightTiny {
+  0% {
+    transform: translate3d(30%, 0px, 0px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@-webkit-keyframes slideInRightTiny {
+  0% {
+    transform: translate3d(30%, 0px, 0px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.slideInRightTiny {
+  animation-name: slideInRightTiny;
+}

@@ -1,0 +1,84 @@
+@import "table_loader.css";
+@import "animation.css";
+
+input, button {
+  outline: none !important;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(36, 36, 36, 0.5);
+  -webkit-border-radius: 6px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: transparent;
+  transition: all .5s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+._disabled-block{
+  pointer-events: none;
+  opacity: 0.6;
+}
+._disabled-block-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-wrapper{
+  margin-top: 40px;
+}
+.ka-thead-cell{
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.ka-paging {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.ka-paging-pages {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+.ka-paging-page-index{
+  margin: 0 2px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.ka-paging-page-index-active {
+  background-color: var(--primary);
+  color: #fff;
+  transform: scaleY(1.1);
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.ka-paging-page-index:hover{
+  transform: scaleY(1.1);
+  background-color: var(--primary-lite);
+}
+.ka-input{
+  border-radius: 10px;
+  border-color: #bdbdbd;
+}
+.ka-row{
+  border-width: 1px;
+  border-color: #bdbdbd;
+}

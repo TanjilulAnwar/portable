@@ -1,0 +1,19 @@
+{
+  "short_name": "Nice Pharmacy",
+  "name": "Pharmacy software developed by Nice Power and IT Solution Ltd.",
+  "Developer-Info": {
+    "Frontend": "Ikbal Nayem",
+    "Backend": "Tanjilul Anwar"
+  },
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#536DFE",
+  "background_color": "#ffffff"
+}
