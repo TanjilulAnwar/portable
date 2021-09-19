@@ -92,6 +92,23 @@ export default React.memo(({updateList, update, manufacturer_info, handleClose})
         </div>
         <div className="col-md-6 col-12">
           <FormControl fullWidth size="small" margin="dense" variant="outlined">
+            <InputLabel id="manufacturer-label">Manufacturer</InputLabel>
+            <Select
+              labelId="manufacturer-label"
+              name="manufacturer_code"
+              label="Manufacturer"
+              value={form_inputs.manufacturer_code || ''}
+              onChange={handleChange}
+            >
+              {form_data.manufacturers && form_data.manufacturers.map(val => 
+                <MenuItem key={val.code} value={val.code}>{val.name}</MenuItem>
+              )}
+            </Select>
+          </FormControl>
+        </div>
+
+        {/* <div className="col-md-6 col-12">
+          <FormControl fullWidth size="small" margin="dense" variant="outlined">
             <InputLabel id="category-label">Subcategory</InputLabel>
             <Select
               labelId="category-label"
@@ -105,10 +122,10 @@ export default React.memo(({updateList, update, manufacturer_info, handleClose})
               )}
             </Select>
           </FormControl>
-        </div>
+        </div> */}
       </div>
 
-      <div className="form-row">
+      {/* <div className="form-row">
         <div className="col-md-8 col-12">
           <FormControl fullWidth size="small" margin="dense" variant="outlined">
             <InputLabel id="manufacturer-label">Manufacturer</InputLabel>
@@ -125,7 +142,7 @@ export default React.memo(({updateList, update, manufacturer_info, handleClose})
             </Select>
           </FormControl>
         </div>
-      </div>
+      </div> */}
 
       <div className="form-row">
         <div className="col">

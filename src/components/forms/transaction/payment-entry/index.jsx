@@ -296,7 +296,7 @@ const PaymentEntryForm = ()=>{
         <div className="col-xl-2 col-md-3 col-sm-4 col-12">
           <TextField                                    // Referance no
             name="ref_no"
-            label="Referance No."
+            label="Reference No."
             variant="outlined"
             size="small"
             margin="dense"

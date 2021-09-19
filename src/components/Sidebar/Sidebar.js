@@ -35,13 +35,13 @@ const structure = [
       { label: "Sales", link: "/history/sales" }
     ],
   },
-  { label: "Return Product", link: "/return-product", icon: <SyncRounded />},
+  // { label: "Return Product", link: "/return-product", icon: <SyncRounded />},
   { label: "Transaction", link: "/transaction", icon: <SwapVerticalCircleTwoTone/>,
     children: [
       { label: "Receipts Entry", link: "/transaction/receipts-entry" },
       { label: "Payment Entry", link: "/transaction/payment-entry" },
       { label: "Contra Entry", link: "/transaction/contra-entry" },
-      { label: "Journal Entry", link: "/transaction/journal-entry" },
+      // { label: "Journal Entry", link: "/transaction/journal-entry" },
     ],
   },
   { label: "Stock Reports", link: "/reports", icon: <AssessmentTwoTone/>,
@@ -55,7 +55,7 @@ const structure = [
   { label: "Product Configuration", link: "/product-configuration", icon: <Build />,
     children: [
       { label: "Manufacturers", link: "/product-configuration/manufacturers" },
-      { label: "Generics", link: "/product-configuration/categories" },
+      { label: "Categories", link: "/product-configuration/categories" },
       { label: "Products", link: "/product-configuration/products" },
     ],
   },
@@ -74,9 +74,9 @@ const structure = [
     children: [
       { label: "Supplier Ledger", link: "/account/supplier-ledger" },
       { label: "Balance Sheet", link: "/account/balance-sheet" },
-      { label: "Ledger Report", link: "/account/ledger-report" },
-      { label: "Income Statement", link: "/account/income-statement" },
-      { label: "Cashflow", link: "/account/cashflow" },
+      // { label: "Ledger Report", link: "/account/ledger-report" },
+      // { label: "Income Statement", link: "/account/income-statement" },
+      // { label: "Cashflow", link: "/account/cashflow" },
     ],
   },
 ];

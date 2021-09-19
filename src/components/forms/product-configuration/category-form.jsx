@@ -50,11 +50,11 @@ export default React.memo(({updateList, update, category_info, handleClose})=>{
       <div className="form-row">
         <div className="col-12">
           <TextField
-            label="Generic Name"
+            label="Category Name"
             variant="outlined"
             margin="dense"
             fullWidth
-            placeholder="Generic Name"
+            placeholder="Category Name"
             name="name"
             required
             autoFocus
@@ -65,7 +65,7 @@ export default React.memo(({updateList, update, category_info, handleClose})=>{
         </div>
       </div>
 
-      <Autocomplete
+      {/* <Autocomplete
         options={[]}
         multiple
         freeSolo
@@ -86,15 +86,16 @@ export default React.memo(({updateList, update, category_info, handleClose})=>{
             label="Subcategories"
             placeholder="Hit 'Enter' to set Subcategory" />
         )}
-      />
+      /> */}
 
       <div className="form-row">
-        <div className="col">
+        <div className="col" >
           <TextField
             label="Description"
             variant="outlined"
             margin="dense"
             fullWidth
+         
             multiline
             placeholder="Description"
             name="description"

@@ -15,8 +15,8 @@ import { PrintButton } from 'components/PDF';
 
 const row = {paddingTop: 2, paddingBottom: 2}
 const columns = [
-  { key: 'name', title: 'Generic Name', isResizable: true, style:{...row, width: 400}, sortDirection: SortDirection.Ascend},
-  { key: 'subcategories', title: 'Subcategories', style:{...row}},
+  { key: 'name', title: 'Category Name', isResizable: true, style:{...row, width: 400}, sortDirection: SortDirection.Ascend},
+  // { key: 'subcategories', title: 'Subcategories', style:{...row}},
   { key: 'description', title: 'Description', style:{...row}},
   { key: 'action', style:{...row, width: 80}},
 ]
@@ -44,7 +44,7 @@ const AddOrUpdate = React.memo(({open, handleClose, updateList, update, category
       scroll="body"
       disableBackdropClick={true}
     >
-      <DialogTitle className="text-center" id="dialog-title">{update?'Update Generic':'Add Generic'}</DialogTitle>
+      <DialogTitle className="text-center" id="dialog-title">{update?'Update Category':'Add Category'}</DialogTitle>
       <DialogContent>
         <CategoryForm updateList={updateList} update={update} category_info={category_info} handleClose={handleClose}/>
       </DialogContent>
@@ -99,7 +99,7 @@ const Categories = ()=>{
 
   return(
     <React.Fragment>
-      <h5 className="text-center font-weight-bold">Generics</h5>
+      <h5 className="text-center font-weight-bold">Categories</h5>
       <div className="card overflow-hidden">
         <Table {...tableProps}
           dispatch={dispatch}

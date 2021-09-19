@@ -15,12 +15,12 @@ import { PrintButton } from 'components/PDF';
 
 const row = {paddingTop: 2, paddingBottom: 2}
 const columns = [
-  { key: 'product_name', title: 'Name', isResizable: true, style:{...row, width: 220}},
-  { key: 'manufacturer', title: 'Manufacturer', isResizable: true, style:{...row, width: 200}},
-  { key: 'category', title: 'Generic Name', isResizable: true, style:{...row, width: 200}},
+  { key: 'product_name', title: 'Product', isResizable: true, style:{...row, width: 220}},
   { key: 'quantity', title: 'Quantity', style:{...row, width: 100, textAlign: 'center'}},
   { key: 'unit_price', title: 'Unit Price', isResizable: true, style:{...row, width: 120, textAlign: 'center'}},
   { key: 'mrp_price', title: 'MRP', style:{...row, width: 100, textAlign: 'center'}},
+  { key: 'manufacturer', title: 'Manufacturer', isResizable: true, style:{...row, width: 200}},
+  { key: 'category', title: 'Category', isResizable: true, style:{...row, width: 200}},
   { key: 'action', style:{...row, width: 80}},
 ]
 
