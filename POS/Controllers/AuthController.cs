@@ -283,17 +283,26 @@ namespace POS.Controllers
                 //}
              
                 var CreatedUser = await userManager.FindByEmailAsync(registration.email);
-                foreach (Trade t in registration.trade_list)
-                {
-                    UserTrade ut = new UserTrade()
-                    {
-                        user_id = CreatedUser.Id,
-                        trade_code = t.code,
-                        client_code = registration.client_code
-                    };
-                    _unitOfWork.UserTrade.Add(ut);
+                //foreach (Trade t in registration.trade_list)
+                //{
+                //    UserTrade ut = new UserTrade()
+                //    {
+                //        user_id = CreatedUser.Id,
+                //        trade_code = t.code,
+                //        client_code = registration.client_code
+                //    };
+                //    _unitOfWork.UserTrade.Add(ut);
 
-                }
+                //}
+                UserTrade ut = new UserTrade()
+                {
+                    user_id = CreatedUser.Id,
+                    trade_code = "0101",
+                    client_code = registration.client_code
+                };
+                _unitOfWork.UserTrade.Add(ut);
+
+
                 User NewUSer = new User()
                 {
                     first_name = registration.first_name.ToUpper(),
@@ -365,17 +374,24 @@ namespace POS.Controllers
 
                 var tradeRemove = _unitOfWork.UserTrade.GetAll(u => u.user_id == updateModel.user_id);
                 _unitOfWork.UserTrade.RemoveRange(tradeRemove);
-                foreach (Trade t in updateModel.trade_list)
-                {
-                    UserTrade ut = new UserTrade()
-                    {
-                        user_id = updateModel.user_id,
-                        trade_code = t.code,
-                        client_code =client_code
-                    };
-                    _unitOfWork.UserTrade.Add(ut);
+                //foreach (Trade t in updateModel.trade_list)
+                //{
+                //    UserTrade ut = new UserTrade()
+                //    {
+                //        user_id = updateModel.user_id,
+                //        trade_code = t.code,
+                //        client_code =client_code
+                //    };
+                //    _unitOfWork.UserTrade.Add(ut);
 
-                }
+                //}
+                UserTrade ut = new UserTrade()
+                {
+                    user_id = updateModel.user_id,
+                    trade_code = "0101",
+                    client_code =client_code
+                };
+                _unitOfWork.UserTrade.Add(ut);
 
                 _unitOfWork.Save();
 

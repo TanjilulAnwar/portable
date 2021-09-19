@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using POS.DataAccess.Repository.IRepository;
@@ -12,13 +10,13 @@ namespace POS.Controllers
     public class AccountGroupController : BaseController
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
+    
 
 
-        public AccountGroupController(IUnitOfWork unitOfWork, IMapper mapper)
+        public AccountGroupController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
+           
 
         }
         [HttpGet]

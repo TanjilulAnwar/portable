@@ -290,7 +290,7 @@ namespace POS.Controllers
 
 
         [HttpGet]
-        [Route("~/print/ Products")]
+        [Route("~/print/Products")]
         public async Task<IActionResult> Product_List()
         {
             try
@@ -1674,9 +1674,9 @@ namespace POS.Controllers
             try
             {
 
-                string client_code = "01";
+                string client_code = getClient();
                 string user_id = GetUserId();
-                string trade_code = "0101";
+                string trade_code = getTrade();
 
 
                 //string client_code = getClient();
@@ -1753,7 +1753,7 @@ namespace POS.Controllers
 
 
                 double ratio = 74;
-                double page_height = 102 + (sv.sales_list.Count() * (ratio))+20;
+                double page_height = 120 + (sv.sales_list.Count() * (ratio))+20;
                 /////////////////////////////////
                 var kv = new Dictionary<string, string>
             {
