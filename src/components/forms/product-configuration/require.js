@@ -14,5 +14,5 @@ export const category_require = {
 export const product_require = {
   'product_name': false,
   'category_code': false,
-  'product_unit': false
+  // 'product_unit': false
 }

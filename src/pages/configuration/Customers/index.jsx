@@ -16,7 +16,7 @@ import { PrintButton } from 'components/PDF';
 const row = {paddingTop: 2, paddingBottom: 2}
 const columns = [
   { key: 'name', title: 'Name', isResizable: true, style:{...row}},
-  { key: 'patient_id', title: 'Patient ID', isResizable: true, style:{...row}},
+  // { key: 'patient_id', title: 'Patient ID', isResizable: true, style:{...row}},
   { key: 'mobile', title: 'Mobile No.', isResizable: true, style:{...row}},
   { key: 'address', title: 'Address', isResizable: true, style:{...row}},
   { key: 'action', style:{...row, width: 80}},

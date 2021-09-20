@@ -110,7 +110,7 @@ export default function HistoryTable({history_list, history_type, ledger, search
           <TableHead>
             <TableRow>
               <TableCell className="border-primary p-0 text-center">
-                {!ledger && <PrintButton url={print_url}/>}
+                {/* {!ledger && <PrintButton url={print_url}/>} */}
               </TableCell>
               <TableCell className="font-weight-bold border-primary">Date</TableCell>
               {!ledger &&

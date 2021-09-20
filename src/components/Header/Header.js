@@ -27,6 +27,7 @@ import { useLayoutState, useLayoutDispatch, toggleSidebar } from "context/Layout
 import { useUserDispatch, signOut, useUserState, setTradeCode } from "context/UserContext";
 import user_type from 'util/user_type';
 import { url } from 'util/Api';
+import { red } from "@material-ui/core/colors";
 
 
 const TradeManu = ({trade_list})=>{
@@ -81,7 +82,7 @@ export default function Header(props) {
   }
 
   return (
-    <AppBar position="fixed" className={classes.appBar}>
+    <AppBar position="fixed" className={classes.appBar} >
       <Toolbar className={classes.toolbar}>
         {userInfo.role!==user_type.SYSADMIN &&
           <IconButton
@@ -103,12 +104,12 @@ export default function Header(props) {
         <h4 className={classes.logotype}>
           {userInfo.role===user_type.SYSADMIN?"System Admin panel":userInfo.client.name}
         </h4>
-        {userInfo.trade && userInfo.trade.length !== 0
+        {/* {userInfo.trade && userInfo.trade.length !== 0
           ? <TradeManu trade_list={userInfo.trade}/>
           : <Button color="secondary" variant="outlined" size="small" onClick={()=>history.push('/configuration/trade')} disabled={userInfo.role===user_type.SYSADMIN}>
               Create Trade
             </Button>
-        }
+        } */}
         <div className={classes.grow}/>
 
         <IconButton
@@ -128,19 +129,21 @@ export default function Header(props) {
           classes={{ paper: classes.profileMenu }}
           disableAutoFocusItem
         >
+ 
           <div className={classes.profileMenuUser}>
             <h4 variant="h4" weight="medium">{userInfo.name}</h4>
+            <MenuItem style={{color: "black"}} className={classNames(classes.profileMenuItem, classes.headerMenuItem)} onClick={handleResetPassword}>
+            <VpnKey className={classes.profileMenuIcon} /> Change password
+          </MenuItem>
             <strong>{user_role}</strong>
             <span className={classes.profileMenuLink} color="primary">
               {userInfo.phone}
             </span>
           </div>
-          <MenuItem className={classNames(classes.profileMenuItem, classes.headerMenuItem)} disabled>
+          {/* <MenuItem className={classNames(classes.profileMenuItem, classes.headerMenuItem)} disabled>
             <AccountIcon className={classes.profileMenuIcon} /> Profile
-          </MenuItem>
-          <MenuItem className={classNames(classes.profileMenuItem, classes.headerMenuItem)} onClick={handleResetPassword}>
-            <VpnKey className={classes.profileMenuIcon} /> Change password
-          </MenuItem>
+          </MenuItem> */}
+         
           <div className={`${classes.profileMenuUser} text-center`}>
             <strong
               className={`${classes.profileMenuLink} border border-secondary rounded`}

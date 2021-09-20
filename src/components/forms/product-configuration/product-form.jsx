@@ -145,7 +145,7 @@ export default React.memo(({updateList, update, manufacturer_info, handleClose})
       </div> */}
 
       <div className="form-row">
-        <div className="col">
+        {/* <div className="col">
           <FormControl fullWidth size="small" margin="dense" variant="outlined" required error={requires.product_unit}>
             <InputLabel id="unit-label">Product unit</InputLabel>
             <Select
@@ -160,7 +160,7 @@ export default React.memo(({updateList, update, manufacturer_info, handleClose})
               )}
             </Select>
           </FormControl>
-        </div>
+        </div> */}
         <div className="col">
           <TextField
             label="Unit Price"
@@ -188,21 +188,6 @@ export default React.memo(({updateList, update, manufacturer_info, handleClose})
             onChange={handleChange}
           />
         </div>
-      </div>
-
-      <div className="form-row">
-        {/* <div className="col-md-7">
-          <TextField
-            label="Reorder level"
-            placeholder="Reorder level"
-            name="reorder_level"
-            variant="outlined"
-            margin="dense"
-            fullWidth
-            value={form_inputs.reorder_level || ''}
-            onChange={handleChange}
-          />
-        </div> */}
         <div className="col-md-5 col-12">
           <FormControl fullWidth size="small" margin="dense" variant="outlined" required>
             <InputLabel id="status-label">Status</InputLabel>
@@ -218,6 +203,22 @@ export default React.memo(({updateList, update, manufacturer_info, handleClose})
             </Select>
           </FormControl>
         </div>
+      </div>
+
+      <div className="form-row">
+        {/* <div className="col-md-7">
+          <TextField
+            label="Reorder level"
+            placeholder="Reorder level"
+            name="reorder_level"
+            variant="outlined"
+            margin="dense"
+            fullWidth
+            value={form_inputs.reorder_level || ''}
+            onChange={handleChange}
+          />
+        </div> */}
+      
       </div>
 
       <div className="form-row">

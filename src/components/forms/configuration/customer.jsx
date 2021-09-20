@@ -80,7 +80,22 @@ export default React.memo(({updateList, update, customer_info, handleClose})=>{
             onChange={handleChange}
           />
         </div>
-        <div className="col-md-5 col-12">
+        <div className="col-md-4 col-sm-4 col-12">
+          <TextField
+            label="Mobile"
+            variant="outlined"
+            margin="dense"
+            fullWidth
+            type="number"
+            placeholder="Mobile"
+            name="mobile"
+            required
+            error={requires.mobile}
+            value={form_inputs.mobile || ''}
+            onChange={handleChange}
+          />
+        </div>
+        {/* <div className="col-md-5 col-12">
           <TextField
             label="Patient ID"
             variant="outlined"
@@ -91,7 +106,7 @@ export default React.memo(({updateList, update, customer_info, handleClose})=>{
             value={form_inputs.patient_id || ''}
             onChange={handleChange}
           />
-        </div>
+        </div> */}
       </div>
 
       <div className="form-row">
@@ -160,21 +175,7 @@ export default React.memo(({updateList, update, customer_info, handleClose})=>{
         </div>
       </div>
       <div className="form-row">
-        <div className="col-md-4 col-sm-4 col-12">
-          <TextField
-            label="Mobile"
-            variant="outlined"
-            margin="dense"
-            fullWidth
-            type="number"
-            placeholder="Mobile"
-            name="mobile"
-            required
-            error={requires.mobile}
-            value={form_inputs.mobile || ''}
-            onChange={handleChange}
-          />
-        </div>
+       
         <div className="col-md-4 col-sm-4 col-12">
           <FormControl fullWidth size="small" margin="dense" variant="outlined" required>
             <InputLabel id="customer_type-label">Customer Status</InputLabel>

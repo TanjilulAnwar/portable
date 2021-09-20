@@ -12,7 +12,7 @@ import { tradeList, postUserData } from 'pages/configuration/server_action';
 // eslint-disable-next-line
 export default React.memo(({updateList, update, user_info, handleClose})=>{
   const [form_inputs, setFormInputs] = React.useState(update?{...user_info}:{status: true})
-  const [trade_list, setTradeList] = React.useState([])
+  // const [trade_list, setTradeList] = React.useState([])
   const [showPassword, setShowPassword] = React.useState(false)
   const [requires, setRequireFields] = React.useState({})
   const [saving, setSaving] = React.useState(false)
@@ -23,14 +23,14 @@ export default React.memo(({updateList, update, user_info, handleClose})=>{
     if(update){ delete req_obj.password }
     setRequireFields(req_obj)
     tradeList()
-      .then(resp => resp.success && setTradeList(resp.message))
+      .then(resp => resp.success /*&& setTradeList(resp.message)*/)
   // eslint-disable-next-line
   }, [])
   
   const handleChange = React.useCallback((e, val)=>{
-    if(e.target.name === undefined){
-      e = {target: {name: 'trade_list', value: val}}
-    }
+    // if(e.target.name === undefined){
+    //   e = {target: {name: 'trade_list', value: val}}
+    // }
     setFormInputs({...form_inputs, [e.target.name]: e.target.value})
   }, [form_inputs])
 
@@ -117,7 +117,7 @@ export default React.memo(({updateList, update, user_info, handleClose})=>{
       </div>
 
       <div className="form-row">
-        <div className="col-md-8">
+        {/* <div className="col-md-8">
           <Autocomplete
             multiple
             options={trade_list}
@@ -140,7 +140,7 @@ export default React.memo(({updateList, update, user_info, handleClose})=>{
               />
             )}
           />
-        </div>
+        </div> */}
         <div className="col-md-4">
           <FormControl variant="outlined" margin="dense" size="small" fullWidth required error={requires.user_type} disabled={update}>
             <InputLabel>Role</InputLabel>

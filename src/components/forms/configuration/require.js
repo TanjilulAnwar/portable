@@ -23,7 +23,7 @@ export const user_require = {
   'last_name': false,
   'phone': false,
   'email': false,
-  'trade_list': false,
+  // 'trade_list': false,
   'user_type': false,
   'password': false,
 }

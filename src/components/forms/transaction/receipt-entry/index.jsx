@@ -72,7 +72,7 @@ const ReceiptFor = React.memo((props)=>{
           </Select>
         </FormControl>
       </div>
-      <div className="col-md-3 col-sm-6">
+      {/* <div className="col-md-3 col-sm-6">
         <FormControl variant="outlined" margin="dense" size="small" fullWidth required error={require_fields[index].receipt_name_id}>
           <InputLabel id="ac_name_label">Account Name</InputLabel>
           <Select                                              // Account Name
@@ -89,7 +89,7 @@ const ReceiptFor = React.memo((props)=>{
             ))}
           </Select>
         </FormControl>
-      </div>
+      </div> */}
       {form_inputs[index]['receipt_head'] === "11010000" &&
         <div className="col-md-3 col-sm-4">
           <CustomerSearch                                    // Customer search

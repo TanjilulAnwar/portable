@@ -93,11 +93,12 @@ const SystemUser = ()=>{
                   <TableHead>
                     <TableRow>
                       <TableCell className="font-weight-bold" width={250}>Name</TableCell>
-                      <TableCell className="font-weight-bold" align="center">Trade</TableCell>
+                      <TableCell className="font-weight-bold" width={100} align="center">Status</TableCell>
+                      {/* <TableCell className="font-weight-bold" align="center">Trade</TableCell> */}
                       <TableCell className="font-weight-bold" width={120} align="center">Role</TableCell>
                       <TableCell className="font-weight-bold" width={180}>Phone Number</TableCell>
                       <TableCell className="font-weight-bold" width={200}>Email</TableCell>
-                      <TableCell className="font-weight-bold" width={100} align="center">Status</TableCell>
+                   
                       <TableCell className="p-0" align="right" width={100}><AddButton dispatch={dispatch}/></TableCell>
                     </TableRow>
                   </TableHead>
@@ -108,18 +109,19 @@ const SystemUser = ()=>{
                           {user.first_name} {user.last_name}
                         </TableCell>
                         <TableCell align="center">
-                          {user.trade_list && user.trade_list.map(val=>(
-                            <Chip label={val.name} style={{margin: 1}} size="small" color="primary"/>
-                          ))}
-                        </TableCell>
-                        <TableCell align="center">{user.user_type}</TableCell>
-                        <TableCell>{user.phone}</TableCell>
-                        <TableCell>{user.email}</TableCell>
-                        <TableCell align="center">
                           {user.status 
                             ? <Chip label="Active" style={{background: 'var(--success)', color: "white"}} size="small"/>
                             : <Chip label="Inactive" style={{background: 'var(--danger)', color: "white"}} size="small"/>}
                         </TableCell>
+                        {/* <TableCell align="center">
+                          {user.trade_list && user.trade_list.map(val=>(
+                            <Chip label={val.name} style={{margin: 1}} size="small" color="primary"/>
+                          ))}
+                        </TableCell> */}
+                        <TableCell align="center">{user.user_type}</TableCell>
+                        <TableCell>{user.phone}</TableCell>
+                        <TableCell>{user.email}</TableCell>
+                      
                         <TableCell align="right">
                           <ActionButton dispatch={dispatch} rowData={user} rowKeyValue={i} disabled={user.user_type === 'ADMIN'}/>
                         </TableCell>
