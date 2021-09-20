@@ -510,7 +510,10 @@ namespace POS.Controllers
                         signingCredentials: new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256)
                         );
                     User thisUser = _unitOfWork.User.GetFirstOrDefault(u => u.user_id == user.Id);
-
+                    if (!thisUser.status)
+                    {
+                        return Unauthorized();
+                    }
                     return Ok(new
                     {
                         success = true,
@@ -561,6 +564,10 @@ namespace POS.Controllers
                 //  var user = await userManager.FindByIdAsync(userID);
                 List<Trade> trades = new List<Trade>() ;
                 User user = _unitOfWork.User.GetFirstOrDefault(u => u.user_id == userID);
+                if (!user.status)
+                {
+                    return Unauthorized();
+                }
                 List<UserTrade> userTrades = _unitOfWork.UserTrade.GetAll(u => u.user_id == userID && u.client_code ==  user.client_code).ToList();
                 List<Trade> tradeList = _unitOfWork.Trade.GetAll(u => u.client_code == user.client_code).ToList();
                Client client = _unitOfWork.Client.GetFirstOrDefault(u => u.code == user.client_code);

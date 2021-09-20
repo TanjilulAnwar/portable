@@ -156,7 +156,7 @@ namespace POS.Controllers
         public class PayProp
         {
             public string payment_head { get; set; }
-            public string payment_name_id { get; set; }
+          
             public double amount { get; set; }
             public string supplier_code { get; set; }
             public string description { get; set; }
@@ -177,7 +177,7 @@ namespace POS.Controllers
         public class ReceiptProp
         {
             public string receipt_head { get; set; }
-            public string receipt_name_id { get; set; }
+          
             public double amount { get; set; }
             public string customer_code { get; set; }
             public string description { get; set; }
@@ -439,7 +439,7 @@ namespace POS.Controllers
                     //this part is for paid for (Debit)
                     ProductEventInfo productEventDr = new ProductEventInfo();
                     productEventDr.transaction_id = payTrx;
-                    AccountsHead acPayment = _unitOfWork.AccountsHead.GetFirstOrDefault(u => u.ac_head_id == pp.payment_name_id);
+                    AccountsHead acPayment = _unitOfWork.AccountsHead.GetFirstOrDefault(u => u.ac_head_id == pp.payment_head);
                     productEventDr.ac_head_id = acPayment.ac_head_id;
                     productEventDr.ac_head_name = acPayment.ac_head_name;
                     productEventDr.transaction_type = acPayment.ac_head_name;
@@ -582,7 +582,7 @@ namespace POS.Controllers
                     //this part is for paid for (Credit)
                     ProductEventInfo productEventCr = new ProductEventInfo();
                     productEventCr.transaction_id = payTrx;
-                    AccountsHead acReceipt = _unitOfWork.AccountsHead.GetFirstOrDefault(u => u.ac_head_id == rp.receipt_name_id);
+                    AccountsHead acReceipt = _unitOfWork.AccountsHead.GetFirstOrDefault(u => u.ac_head_id == rp.receipt_head);
                     productEventCr.ac_head_id = acReceipt.ac_head_id;
                     productEventCr.ac_head_name = acReceipt.ac_head_name;
                     productEventCr.transaction_type = acReceipt.ac_head_name;

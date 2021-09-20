@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -54,21 +53,12 @@ namespace POS.Controllers
                 string client_code = getClient();
                 string trade_code = getTrade();
                 List<Supplier> suppliers = _unitOfWork.Supplier.GetAll(u => u.client_code == client_code && u.trade_code == trade_code).ToList();
-              
-                /////////////////////////////////
-                var kv = new Dictionary<string, string>
-            {
-                { "username", "USER" },
-                { "age", "20" },
-                { "url", "google.com" }
-            };
-
                 var options = new ConvertOptions
                 {
-                  //  HeaderHtml = SD.SERVER+"/header.html",
+               
                     PageOrientation = Wkhtmltopdf.NetCore.Options.Orientation.Portrait,
                     FooterHtml = SD.SERVER+"/footer.html",
-                    Replacements = kv,
+                  
                     PageMargins = new Wkhtmltopdf.NetCore.Options.Margins()
                     {
                         Top = 15,
@@ -92,8 +82,6 @@ namespace POS.Controllers
                 return Json(new { success = false, message = "Sorry! Something Went Wrong!" });
             }
 
-
-
         }
 
 
@@ -109,18 +97,16 @@ namespace POS.Controllers
         {
             try
             {
-                //string client_code = getClient();
-                //string trade_code = getTrade();
-                string client_code = "01";
-                string trade_code = "0101";
+                string client_code = getClient();
+                string trade_code = getTrade();
+
                 List<Product> products = _unitOfWork.Product.GetAll(u => u.client_code == client_code && u.trade_code == trade_code).OrderByDescending(u=>u.quantity).ToList();
 
                 var options = new ConvertOptions
                 {
-                    //  HeaderHtml = SD.SERVER+"/header.html",
+                    
                     PageOrientation = Wkhtmltopdf.NetCore.Options.Orientation.Portrait,
                     FooterHtml = SD.SERVER + "/footer.html",
-                    //Replacements = kv,
                     PageMargins = new Wkhtmltopdf.NetCore.Options.Margins()
                     {
                         Top = 15,
@@ -181,26 +167,20 @@ namespace POS.Controllers
                                                select (s.name).ToString();
                     categoryVMs.Add(categoryVM);
                 }
-                /////////////////////////////////
-                var kv = new Dictionary<string, string>
-            {
-                { "username", "USER" },
-                { "age", "20" },
-                { "url", "google.com" }
-            };
+          
 
                 var options = new ConvertOptions
                 {
-                    //  HeaderHtml = SD.SERVER+"/header.html",
+                   
                     PageOrientation = Wkhtmltopdf.NetCore.Options.Orientation.Portrait,
                     FooterHtml = SD.SERVER + "/footer.html",
-                    Replacements = kv,
+             
                     PageMargins = new Wkhtmltopdf.NetCore.Options.Margins()
                     {
-                        Top = 15,
+                        Top = 10,
                         Left = 10,
                         Right = 10,
-                        Bottom = 15
+                        Bottom = 10
                     }
 
                 };
