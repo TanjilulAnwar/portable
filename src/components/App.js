@@ -11,7 +11,7 @@ const App = React.memo(()=>{
   var { isAuthenticated, userInfo } = useUserState();
 
   const PrivateRoute = ({ component, ...rest })=>{
-    document.title = "Pharmacy" + window.location.pathname.replace('/', ' | ').replace(/\b\w/g, c => c.toUpperCase())
+    document.title = "TAWFIQ ENTERPRISE" + window.location.pathname.replace('/', ' | ').replace(/\b\w/g, c => c.toUpperCase())
     return (
       <Route
         {...rest}
@@ -28,7 +28,7 @@ const App = React.memo(()=>{
 
   const SysAdmin = ({ component, ...rest })=>{
     React.useEffect(()=>{
-      document.title = "Pharmacy | System-Admin"
+      document.title = "TAWFIQ ENTERPRISE | System-Admin"
     }, [])
     return (
       <Route
@@ -44,7 +44,7 @@ const App = React.memo(()=>{
 
   const PublicRoute = ({ component, ...rest })=>{
     React.useEffect(()=>{
-      document.title = "Pharmacy | Login"
+      document.title = "TAWFIQ ENTERPRISE | Login"
     }, [])
     return (
       <Route

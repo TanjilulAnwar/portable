@@ -24,8 +24,9 @@ const Login = React.memo((props)=>{
   return (
     <Grid container className={classes.container}>
       <div className={classes.logotypeContainer}>
-        <img src={logo} alt="logo" className={`${classes.logotypeImage} _dealWithIt`} />
-        <h1 className={classes.logotypeText}>Nice-Pharmacy</h1>
+        <img src={logo} alt="logo" className={classes.logotypeImage} />
+        <h1 className={classes.logotypeText}>TAWFIQ</h1>
+        <h1 className={classes.logotypeText}>ENTERPRISE</h1>
       </div>
       <div className={classes.formContainer}>
         <div className={`${classes.form} animated slideInRightTiny`}>
@@ -103,7 +104,7 @@ const Login = React.memo((props)=>{
           </React.Fragment>
         </div>
         <small color="primary" className={classes.copyright}>
-          Nice Power and IT Solution Ltd.  - {new Date().getFullYear()}
+          Tawfiqur Rahman  - {new Date().getFullYear()}
         </small>
       </div>
     </Grid>

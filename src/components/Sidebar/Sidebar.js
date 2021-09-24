@@ -35,13 +35,13 @@ const structure = [
       { label: "Sales", link: "/history/sales" }
     ],
   },
-  // { label: "Return Product", link: "/return-product", icon: <SyncRounded />},
+
   { label: "Transaction", link: "/transaction", icon: <SwapVerticalCircleTwoTone/>,
     children: [
       { label: "Receipts Entry", link: "/transaction/receipts-entry" },
       { label: "Payment Entry", link: "/transaction/payment-entry" },
       { label: "Contra Entry", link: "/transaction/contra-entry" },
-      // { label: "Journal Entry", link: "/transaction/journal-entry" },
+    
     ],
   },
   { label: "Stock Reports", link: "/reports", icon: <AssessmentTwoTone/>,
@@ -61,21 +61,19 @@ const structure = [
   },
   { label: "Configuration", link: "/configuration", icon: <Settings />, 
     children: [
-      // { label: "Trade Management", link: "/configuration/trade" },
+ 
       { label: "User Management", link: "/configuration/user" },
       { label: "Customers", link: "/configuration/customer" },
       { label: "Suppliers", link: "/configuration/supplier-entry"},
       { label: "Account Group", link: "/configuration/account-group"},
       { label: "Account Head", link: "/configuration/account-head"},
-      // { label: "Account Name", link: "/configuration/account-name"},
+
     ],
   },
   { label: "Accounts", link: "/account", icon: <AccountBalance />, 
     children: [
-      // { label: "Supplier Ledger", link: "/account/supplier-ledger" },
-      // { label: "Balance Sheet", link: "/account/balance-sheet" },
+ 
       { label: "Ledger Report", link: "/account/ledger-report" },
-      // { label: "Income Statement", link: "/account/income-statement" },
       { label: "Cashflow", link: "/account/cashflow" },
     ],
   },

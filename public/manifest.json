@@ -1,9 +1,9 @@
 {
-  "short_name": "Nice Pharmacy",
-  "name": "Pharmacy software developed by Nice Power and IT Solution Ltd.",
+  "short_name": "Tawfiq Enterprise",
+  "name": "Tawfiq Enterprise",
   "Developer-Info": {
-    "Frontend": "Ikbal Nayem",
-    "Backend": "Tanjilul Anwar"
+    "Frontend": "Tawfiq Enterprise",
+    "Backend": "Tawfiq Enterprise"
   },
   "icons": [
     {
