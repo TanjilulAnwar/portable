@@ -81,3 +81,12 @@ D:\Portable\Back-end\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.AssemblyInfo.
 D:\Portable\Back-end\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.csproj.CoreCompileInputs.cache
 D:\Portable\Back-end\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.dll
 D:\Portable\Back-end\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.pdb
+K:\toufiq\backend\POS.Models\bin\Debug\netcoreapp3.1\POS.Models.deps.json
+K:\toufiq\backend\POS.Models\bin\Debug\netcoreapp3.1\POS.Models.dll
+K:\toufiq\backend\POS.Models\bin\Debug\netcoreapp3.1\POS.Models.pdb
+K:\toufiq\backend\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.csprojAssemblyReference.cache
+K:\toufiq\backend\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.AssemblyInfoInputs.cache
+K:\toufiq\backend\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.AssemblyInfo.cs
+K:\toufiq\backend\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.csproj.CoreCompileInputs.cache
+K:\toufiq\backend\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.dll
+K:\toufiq\backend\POS.Models\obj\Debug\netcoreapp3.1\POS.Models.pdb

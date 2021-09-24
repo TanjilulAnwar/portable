@@ -2192,19 +2192,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NICE\\.nuget\\packages\\": {}
+    "C:\\Users\\tanji\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Portable\\Back-end\\POS.DataAccess\\POS.DataAccess.csproj",
+      "projectUniqueName": "K:\\toufiq\\backend\\POS.DataAccess\\POS.DataAccess.csproj",
       "projectName": "POS.DataAccess",
-      "projectPath": "D:\\Portable\\Back-end\\POS.DataAccess\\POS.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\NICE\\.nuget\\packages\\",
-      "outputPath": "D:\\Portable\\Back-end\\POS.DataAccess\\obj\\",
+      "projectPath": "K:\\toufiq\\backend\\POS.DataAccess\\POS.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\tanji\\.nuget\\packages\\",
+      "outputPath": "K:\\toufiq\\backend\\POS.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\NICE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tanji\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2218,8 +2218,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Portable\\Back-end\\POS.Models\\POS.Models.csproj": {
-              "projectPath": "D:\\Portable\\Back-end\\POS.Models\\POS.Models.csproj"
+            "K:\\toufiq\\backend\\POS.Models\\POS.Models.csproj": {
+              "projectPath": "K:\\toufiq\\backend\\POS.Models\\POS.Models.csproj"
             }
           }
         }
@@ -2276,7 +2276,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

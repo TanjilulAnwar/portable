@@ -45,16 +45,7 @@ namespace POS.Controllers
             return Json(new { success = true, message = achList });
         }
 
-        [HttpGet]
-        [Route("~/AccountsName/List")]
-        public IActionResult ACNList()
-        {
-            string client_code = getClient();
-            string trade_code = getTrade();
-            List<AccountsHead> achList = _unitOfWork.AccountsHead.GetAll(u => u.client_code == client_code && u.trade_code == trade_code && u.main_sub =="S").ToList();
-            return Json(new { success = true, message = achList });
-        }
-
+     
 
         public class AcReport
         {
@@ -153,78 +144,6 @@ namespace POS.Controllers
 
 
        
-
-
-
-        [HttpPost]
-        [Route("~/AccountsName/add")]
-        public IActionResult AccountsNameUpsert([FromBody] AccountsName accountsName)
-        {
-
-            if (ModelState.IsValid)
-            {
-                string client_code = getClient();
-                string trade_code = getTrade();
-
-                AccountsHead accountsHead = new AccountsHead();
-
-                if (accountsHead.id == 0)
-                {
-                    AccountsGroup ag = _unitOfWork.AccountsGroup.GetFirstOrDefault(u => u.ac_group_id == accountsName.ac_group_id);
-                    accountsHead.ac_head_id = _unitOfWork.AccountsHead._setAccountsNameID(accountsName.ac_head_id, client_code,trade_code);
-                  
-                    accountsHead.ac_head_name = accountsName.ac_head_name;
-                    accountsHead.control_type = ag.control_type;
-                    accountsHead.ac_group_name = ag.ac_group_name;
-                    accountsHead.ac_group_id = ag.ac_group_id;
-                    accountsHead.ac_type = ag.ac_type;
-                    accountsHead.ac_name_head_id = accountsName.ac_head_id;
-                    accountsHead.main_sub = "S";
-                    accountsHead.description = accountsName.description;
-                    accountsHead.ac_status = accountsName.ac_status;
-                    accountsHead.client_code = client_code;
-                    accountsHead.trade_code = trade_code;
-                    _unitOfWork.AccountsHead.Add(accountsHead);
-
-
-                }
-                else
-                {
-                    if (accountsHead.id <= 106)
-                    {
-                        return Json(new { success = false, message = "This account head is set up by system and therefore cannot be updated!" });
-                    }
-                    AccountsGroup ag = _unitOfWork.AccountsGroup.GetFirstOrDefault(u => u.ac_group_id == accountsHead.ac_group_id);
-                    accountsHead.ac_head_id = _unitOfWork.AccountsHead._setAccountsNameID(accountsHead.ac_head_id, client_code,trade_code);
-                    accountsHead.ac_name_head_id = accountsName.ac_head_id;
-                    accountsHead.ac_head_name = accountsName.ac_head_name;
-                    accountsHead.control_type = ag.control_type;
-                    accountsHead.ac_group_name = ag.ac_group_name;
-                    accountsHead.description = accountsName.description;
-                    accountsHead.ac_status = accountsName.ac_status;
-                    accountsHead.main_sub = "S";
-                    accountsHead.client_code = client_code;
-                    accountsHead.trade_code = trade_code;
-                    _unitOfWork.AccountsHead.Update(accountsHead);
-
-                }
-                _unitOfWork.Save();
-                return Json(new { success = true, message = accountsHead });
-
-            }
-            else
-            {
-                return Json(new { success = false, message = "Add failed!!" });
-            }
-
-        }
-
-
-
-
-
-
-
 
 
 

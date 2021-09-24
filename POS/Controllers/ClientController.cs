@@ -36,90 +36,6 @@ namespace POS.Controllers
 
 
 
-        //[HttpGet]
-        //[Route("~/test/first")]
-        //public async Task<IActionResult> testapi()
-
-        //{
-        //    using (var client = new HttpClient())
-        //    {
-        //        client.BaseAddress = new Uri("http://localhost:44317");
-        //        client.DefaultRequestHeaders.Accept.Clear();
-        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //        var response = client.GetAsync("test/second").Result;
-        //        if (response.IsSuccessStatusCode)
-        //        {
-        //            string responseString = response.Content.ReadAsStringAsync().Result;
-        //            Client modelObject = await JsonSerializer.DeserializeAsync<Client>(await response.Content.ReadAsStreamAsync());
-
-        //        }
-        //    }
-        //    return Ok("Done");
-        //}
-
-        //[HttpGet]
-        //[Route("~/test/post")]
-        //public async Task<IActionResult> testapiX()
-
-        //{
-        //    using (var client = new HttpClient())
-        //    {
-        //        client.BaseAddress = new Uri("http://localhost:44317");
-        //        client.DefaultRequestHeaders.Accept.Clear();
-        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //        var clientO = new Client()
-        //        {
-
-        //            name = "gix",
-        //            code = "bix",
-        //            address = "tix",
-        //            zipcode ="dddd",
-        //            description="dfghidfispklghfklihgdfklghdfklsghklfdsghlfskghkdfshgklhdfsg"
-
-        //        };
-        //        var json = Newtonsoft.Json.JsonConvert.SerializeObject(clientO);
-        //        var content = new StringContent(json.ToString(), Encoding.UTF8, "application/json");
-        //        var response = client.PostAsync("test/third", content).Result;
-        //       // var response = client.GetAsync("test/second").Result;
-        //        if (response.IsSuccessStatusCode)
-        //        {
-        //            string responseString = response.Content.ReadAsStringAsync().Result;
-        //            Client modelObject = await JsonSerializer.DeserializeAsync<Client>(await response.Content.ReadAsStreamAsync());
-
-        //        }
-        //    }
-        //    return Ok("Done");
-        //}
-
-        //[HttpGet]
-        //[Route("~/test/second")]
-        //public async Task<IActionResult> testapi2()
-
-        //{
-        //    Client c =  new Client()
-        //    {
-        //        name = "Lol",
-        //        code = "tol",
-        //        address = "hol"
-        //    };
-        //    return Ok(c);
-        //}
-
-        //[HttpPost]
-        //[Route("~/test/third")]
-        //public async Task<IActionResult> testapi3([FromBody] Client client)
-
-        //{
-
-        //    Client c = new Client()
-        //    {
-        //        name = "Lol",
-        //        code = "tol",
-        //        address = "hol"
-        //    };
-        //    return Ok(c);
-        //}
 
 
         [Authorize(Roles = UserRoles.SYSADMIN)]
@@ -214,11 +130,10 @@ namespace POS.Controllers
                     }
                     else
                     {
-                        //update when they do not change the image
+                       
                         if (client.id != 0)
                         {
-                            //Client objFromDb = _unitOfWork.Client.GetFirstOrDefault(u=>u.id == client.id);
-                            //client.logo = objFromDb.logo;
+                         
 
                         }
                     }
