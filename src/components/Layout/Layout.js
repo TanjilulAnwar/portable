@@ -31,7 +31,7 @@ const Routes = React.memo(({path})=>{
       <FilterRoute role={[SALES]} path="/sales" component={asyncComponent(() => import('pages/sales'))} />
       <FilterRoute role={[INVENTORY]} path="/purchase" component={asyncComponent(() => import('pages/purchase'))} />
       <Route path="/history" component={History}/>
-      <FilterRoute role={[SALES]} path="/return-product" component={asyncComponent(() => import('pages/ReturnProduct'))}/>
+      {/* <FilterRoute role={[SALES]} path="/return-product" component={asyncComponent(() => import('pages/ReturnProduct'))}/> */}
       <FilterRoute role={[ACCOUNTS]} path="/transaction" component={Transaction}/>
       <FilterRoute role={[ACCOUNTS]} path="/reports" component={ReportRoutes}/>
       <FilterRoute role={[INVENTORY]} path="/product-configuration" component={ProductConfiguration}/>

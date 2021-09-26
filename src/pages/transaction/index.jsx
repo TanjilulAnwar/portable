@@ -6,7 +6,6 @@ import asyncComponent from '../../util/asyncComponent';
 const ReceiptsEntry = asyncComponent(() => import('./ReceiptsEntry'));
 const PaymentEntry = asyncComponent(() => import('./PaymentEntry'));
 const ContraEntry = asyncComponent(() => import('./ContraEntry'));
-const JournalEntry = asyncComponent(() => import('./JournalEntry'));
 
 const TransactionRoutes = React.memo(()=>{
   const path = useRouteMatch().path
@@ -18,7 +17,6 @@ const TransactionRoutes = React.memo(()=>{
         <Route path={`${path}/receipts-entry`} component={ReceiptsEntry}/>
         <Route path={`${path}/payment-entry`} component={PaymentEntry}/>
         <Route path={`${path}/contra-entry`} component={ContraEntry}/>
-        <Route path={`${path}/journal-entry`} component={JournalEntry}/>
         <Route component={asyncComponent(() => import('../error/Error'))}/>
       </Switch>
     </div>

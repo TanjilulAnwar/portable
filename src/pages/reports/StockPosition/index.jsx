@@ -1,6 +1,6 @@
 import React from 'react';
 import { PrintButton } from 'components/PDF';
-const SummaryReport = ()=>{
+const StockPosition = ()=>{
   return(
     <div>
       <h5 className="text-center font-weight-bold mb-3">Stock Position</h5>
@@ -24,4 +24,4 @@ const SummaryReport = ()=>{
   )
 }
 
-export default SummaryReport
+export default StockPosition

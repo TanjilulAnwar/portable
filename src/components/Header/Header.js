@@ -30,41 +30,6 @@ import { url } from 'util/Api';
 
 
 
-// const TradeManu = ({trade_list})=>{
-//   const [anchorEl, setAnchorEl] = React.useState(null);
-//   const [selectedIndex, setSelectedIndex] = React.useState(0);
-//   const history = useHistory();
-  
-//   const handleMenuItemClick = (_, index) => {
-//     setSelectedIndex(index);
-//     setAnchorEl(null);
-//     setTradeCode(trade_list[index].code)
-//     history.replace(history.location.pathname)
-//   };
-
-//   return (
-//     <div>
-//       <Button size="small" color="secondary" onClick={(event)=>setAnchorEl(event.currentTarget)}>
-//         <span>{'{ '}{trade_list[selectedIndex].name} <KeyboardArrowDownRounded fontSize="small"/>{'}'}</span>
-//       </Button>
-//       <Menu
-//         anchorEl={anchorEl}
-//         open={Boolean(anchorEl)}
-//         onClose={()=>setAnchorEl(null)}
-//       >
-//         {trade_list.map((trade, index) => (
-//           <MenuItem
-//             key={trade.id}
-//             selected={index === selectedIndex}
-//             onClick={(event) => handleMenuItemClick(event, index)}
-//           >
-//             {trade.name}
-//           </MenuItem>
-//         ))}
-//       </Menu>
-//     </div>
-//   );
-// }
 
 export default function Header(props) {
   var classes = useStyles();

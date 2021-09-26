@@ -49,7 +49,7 @@ const structure = [
       { label: "Purchase Details", link: "/reports/purchase-details" },
       { label: "Sales Details", link: "/reports/sales-details" },
       { label: "Inventory Report", link: "/reports/inventory-report" },
-      { label: "Stock Position", link: "/reports/summary-report" },
+      { label: "Stock Position", link: "/reports/stock-position" },
     ],
   },
   { label: "Product Configuration", link: "/product-configuration", icon: <Build />,
