@@ -26,22 +26,22 @@ import {transactionMedia} from 'pages/configuration/server_action';
 
 const ReceiptFor = React.memo((props)=>{
   const {index, receipt_number, handleChange, handleAddOne, handleRemoveOne, require_fields, form_inputs, receipt_for} = props
-  const [ac_name_list, setAcList] = React.useState([])
-  const [ac_name, setAcName] = React.useState('')
+  // const [ac_name_list, setAcList] = React.useState([])
+  // const [ac_name, setAcName] = React.useState('')
 
-  React.useEffect(()=>{
-    setAcName(form_inputs[index].receipt_name_id)
-    if(!!form_inputs[index].receipt_head){
-      const name_list = receipt_for.find(val => val.ac_head_id === form_inputs[index].receipt_head)
-      setAcList(name_list.ac_name_list)
-    }
-  // eslint-disable-next-line
-  }, [form_inputs[index].receipt_head, receipt_for, index])
+  // React.useEffect(()=>{
+  //   setAcName(form_inputs[index].receipt_name_id)
+  //   if(!!form_inputs[index].receipt_head){
+  //     const name_list = receipt_for.find(val => val.ac_head_id === form_inputs[index].receipt_head)
+  //     setAcList(name_list.ac_name_list)
+  //   }
+  // // eslint-disable-next-line
+  // }, [form_inputs[index].receipt_head, receipt_for, index])
 
-  const handleAccountName = React.useCallback((e)=>{
-    setAcName(e.target.value)
-    handleChange(e, index)
-  }, [handleChange, index])
+  // const handleAccountName = React.useCallback((e)=>{
+  //   setAcName(e.target.value)
+  //   handleChange(e, index)
+  // }, [handleChange, index])
 
   const manageCustomerInfo = React.useCallback((info)=>{
     let e_cus = {target: {name: 'customer_info', value: info}}

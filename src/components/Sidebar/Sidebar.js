@@ -10,8 +10,8 @@ import {
   HistoryRounded,
   SwapVerticalCircleTwoTone,
   AssessmentTwoTone,
-  AccountBalance,
-  SyncRounded
+  AccountBalance
+
 } from "@material-ui/icons";
 import { useTheme } from "@material-ui/styles";
 import { withRouter } from "react-router-dom";

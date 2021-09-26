@@ -7,15 +7,15 @@ import {
   IconButton,
   Menu,
   MenuItem,
-  Button
+
 } from "@material-ui/core";
 import {
   Menu as MenuIcon,
-  Person as AccountIcon,
+
   MenuOpen,
   VpnKey,
   AccountCircle,
-  KeyboardArrowDownRounded
+ 
 } from "@material-ui/icons";
 import classNames from "classnames";
 
@@ -24,47 +24,47 @@ import useStyles from "./styles";
 
 // components
 import { useLayoutState, useLayoutDispatch, toggleSidebar } from "context/LayoutContext";
-import { useUserDispatch, signOut, useUserState, setTradeCode } from "context/UserContext";
+import { useUserDispatch, signOut, useUserState } from "context/UserContext";
 import user_type from 'util/user_type';
 import { url } from 'util/Api';
-import { red } from "@material-ui/core/colors";
 
 
-const TradeManu = ({trade_list})=>{
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
-  const history = useHistory();
+
+// const TradeManu = ({trade_list})=>{
+//   const [anchorEl, setAnchorEl] = React.useState(null);
+//   const [selectedIndex, setSelectedIndex] = React.useState(0);
+//   const history = useHistory();
   
-  const handleMenuItemClick = (_, index) => {
-    setSelectedIndex(index);
-    setAnchorEl(null);
-    setTradeCode(trade_list[index].code)
-    history.replace(history.location.pathname)
-  };
+//   const handleMenuItemClick = (_, index) => {
+//     setSelectedIndex(index);
+//     setAnchorEl(null);
+//     setTradeCode(trade_list[index].code)
+//     history.replace(history.location.pathname)
+//   };
 
-  return (
-    <div>
-      <Button size="small" color="secondary" onClick={(event)=>setAnchorEl(event.currentTarget)}>
-        <span>{'{ '}{trade_list[selectedIndex].name} <KeyboardArrowDownRounded fontSize="small"/>{'}'}</span>
-      </Button>
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={()=>setAnchorEl(null)}
-      >
-        {trade_list.map((trade, index) => (
-          <MenuItem
-            key={trade.id}
-            selected={index === selectedIndex}
-            onClick={(event) => handleMenuItemClick(event, index)}
-          >
-            {trade.name}
-          </MenuItem>
-        ))}
-      </Menu>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <Button size="small" color="secondary" onClick={(event)=>setAnchorEl(event.currentTarget)}>
+//         <span>{'{ '}{trade_list[selectedIndex].name} <KeyboardArrowDownRounded fontSize="small"/>{'}'}</span>
+//       </Button>
+//       <Menu
+//         anchorEl={anchorEl}
+//         open={Boolean(anchorEl)}
+//         onClose={()=>setAnchorEl(null)}
+//       >
+//         {trade_list.map((trade, index) => (
+//           <MenuItem
+//             key={trade.id}
+//             selected={index === selectedIndex}
+//             onClick={(event) => handleMenuItemClick(event, index)}
+//           >
+//             {trade.name}
+//           </MenuItem>
+//         ))}
+//       </Menu>
+//     </div>
+//   );
+// }
 
 export default function Header(props) {
   var classes = useStyles();

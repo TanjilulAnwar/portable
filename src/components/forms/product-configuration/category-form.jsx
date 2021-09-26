@@ -1,10 +1,10 @@
 import React from 'react';
 import {
   TextField,
-  Button,
-  Chip
+  Button
+ 
 } from '@material-ui/core';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+
 import cogoToast from 'cogo-toast';
 import {category_require} from './require';
 import checkValidation from '../../../util/checkValidation';

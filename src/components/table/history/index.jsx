@@ -98,9 +98,9 @@ export default function HistoryTable({history_list, history_type, ledger, search
   if(history_list.length===0)
     return <Empty text="No report found!"/>
   
-  const print_url = history_type === 'Sales'
-                      ? `/sale/history/print?customer_code=${search_data.customer_code}&start_date=${search_data.start_date}&end_date=${search_data.end_date}`
-                      : `/purchase/history/print?supplier_code=${search_data.supplier_code}&start_date=${search_data.start_date}&end_date=${search_data.end_date}`
+  // const print_url = history_type === 'Sales'
+  //                     ? `/sale/history/print?customer_code=${search_data.customer_code}&start_date=${search_data.start_date}&end_date=${search_data.end_date}`
+  //                     : `/purchase/history/print?supplier_code=${search_data.supplier_code}&start_date=${search_data.start_date}&end_date=${search_data.end_date}`
 
   return (
     <div className="card overflow-hidden">

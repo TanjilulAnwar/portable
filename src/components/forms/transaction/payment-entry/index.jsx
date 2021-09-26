@@ -26,22 +26,22 @@ import {transactionMedia} from 'pages/configuration/server_action';
 
 const PaymentFor = React.memo((props)=>{
   const {index, payment_number, handleChange, handleAddOne, handleRemoveOne, require_fields, form_inputs, payment_for} = props
-  const [ac_name_list, setAcList] = React.useState([])
-  const [ac_name, setAcName] = React.useState('')
+// const [ac_name_list, setAcList] = React.useState([])
+//  const [ac_name, setAcName] = React.useState('')
 
-  React.useEffect(()=>{
-    setAcName(form_inputs[index].payment_name_id)
-    if(!!form_inputs[index].payment_head){
-      const name_list = payment_for.find(val => val.ac_head_id === form_inputs[index].payment_head)
-      setAcList(name_list.ac_name_list)
-    }
-  // eslint-disable-next-line
-  }, [form_inputs[index].payment_head, payment_for, index])
+  // React.useEffect(()=>{
+  //   setAcName(form_inputs[index].payment_name_id)
+  //   if(!!form_inputs[index].payment_head){
+  //     const name_list = payment_for.find(val => val.ac_head_id === form_inputs[index].payment_head)
+  //     setAcList(name_list.ac_name_list)
+  //   }
+  // // eslint-disable-next-line
+  // }, [form_inputs[index].payment_head, payment_for, index])
 
-  const handleAccountName = React.useCallback((e)=>{
-    setAcName(e.target.value)
-    handleChange(e, index)
-  }, [handleChange, index])
+  // const handleAccountName = React.useCallback((e)=>{
+  //   setAcName(e.target.value)
+  //   handleChange(e, index)
+  // }, [handleChange, index])
   
   const manageSuppierInfo = React.useCallback((info)=>{
     let e = {target: {name: 'amount', value: info?info.due:null}}

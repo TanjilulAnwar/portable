@@ -1,7 +1,6 @@
 import React from 'react';
 import {TextField, Button, FormControl, InputLabel, Select, MenuItem, OutlinedInput, InputAdornment, IconButton} from '@material-ui/core';
 import {VisibilityOutlined, VisibilityOffOutlined} from '@material-ui/icons';
-import Autocomplete from '@material-ui/lab/Autocomplete';
 import cogoToast from 'cogo-toast';
 import {user_require} from './require';
 import checkValidation from 'util/checkValidation';
