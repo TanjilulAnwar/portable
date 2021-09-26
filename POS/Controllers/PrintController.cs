@@ -34,8 +34,6 @@ namespace POS.Controllers
             return View();
         }
 
-        
-   
         public Client getClient(string client_code)
         {
             Client client = _unitOfWork.Client.GetFirstOrDefault(u => u.code == client_code);
@@ -1196,15 +1194,10 @@ namespace POS.Controllers
 
 
 
-                double ratio = 74;
-                double page_height = 120 + (sv.sales_list.Count() * (ratio))+20;
+                double ratio = 73.97500;
+                double page_height = 120 + (sv.sales_list.Count() * 50);
                 /////////////////////////////////
-                var kv = new Dictionary<string, string>
-            {
-                { "username", "USER" },
-                { "age", "20" },
-                { "url", "google.com" }
-            };
+          
 
                 var options = new ConvertOptions
                 {
