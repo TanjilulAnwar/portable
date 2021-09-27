@@ -14,7 +14,6 @@ const ConfigurationRoutes = (props)=>{
     <div className="app-wrapper">
       <Switch>
         <Redirect exact from={match} to={`${match}/supplier-entry`} />
-        {/* <Route path={`${match}/trade`} component={asyncComponent(() => import('./TradeManagement'))}/> */}
         <FilterRoute role={[]} path={`${match}/user`} component={asyncComponent(() => import('./UserManagement'))}/>
         <FilterRoute role={[SALES]} path={`${match}/customer`} component={asyncComponent(() => import('./Customers'))}/>
         <FilterRoute role={[INVENTORY]} path={`${match}/supplier-entry`} component={asyncComponent(() => import('./SupplierEntry'))}/>

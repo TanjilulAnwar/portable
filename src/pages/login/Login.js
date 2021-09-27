@@ -25,13 +25,13 @@ const Login = React.memo((props)=>{
     <Grid container className={classes.container}>
       <div className={classes.logotypeContainer}>
         <img src={logo} alt="logo" className={classes.logotypeImage} />
-        <h1 className={classes.logotypeText}>TAWFIQ</h1>
-        <h1 className={classes.logotypeText}>ENTERPRISE</h1>
+        {/* <h1 className={classes.logotypeText}>TAWFIQ</h1>
+        <h1 className={classes.logotypeText}>ENTERPRISE</h1> */}
       </div>
       <div className={classes.formContainer}>
         <div className={`${classes.form} animated slideInRightTiny`}>
           <React.Fragment>
-            <h2 className={classes.greeting}>Admin Login</h2>
+            <h2 className={classes.greeting}>Sign in</h2>
             <hr className="bg-secondary"/>
             <TextField
               InputProps={{

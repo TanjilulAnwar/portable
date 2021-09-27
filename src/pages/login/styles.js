@@ -12,7 +12,7 @@ export default makeStyles(theme => ({
     left: 0,
   },
   logotypeContainer: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundImage:"linear-gradient(to right, #3F5EFB , #FC466B )",
     width: "60%",
     height: "100%",
     display: "flex",
@@ -27,7 +27,7 @@ export default makeStyles(theme => ({
     },
   },
   logotypeImage: {
-    width: 200,
+    width: 500,
     marginBottom: theme.spacing(4),
    
 
@@ -41,6 +41,7 @@ export default makeStyles(theme => ({
     },
   },
   formContainer: {
+ 
     width: "40%",
     height: "100%",
     display: "flex",
