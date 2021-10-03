@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import { withRouter } from "react-router-dom";
 import useStyles from "./styles";
-import logo from "./logo.png";
+import logo from "./logo.svg";
 import { useUserDispatch, loginUser } from "../../context/UserContext";
 
 const Login = React.memo((props)=>{

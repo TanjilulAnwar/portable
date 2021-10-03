@@ -8,9 +8,9 @@ import {
   AddShoppingCart,
   LocalMallTwoTone,
   HistoryRounded,
-  SwapVerticalCircleTwoTone,
+  // SwapVerticalCircleTwoTone,
   AssessmentTwoTone,
-  AccountBalance
+  // AccountBalance
 
 } from "@material-ui/icons";
 import { useTheme } from "@material-ui/styles";
@@ -36,14 +36,14 @@ const structure = [
     ],
   },
 
-  { label: "Transaction", link: "/transaction", icon: <SwapVerticalCircleTwoTone/>,
-    children: [
-      { label: "Receipts Entry", link: "/transaction/receipts-entry" },
-      { label: "Payment Entry", link: "/transaction/payment-entry" },
-      { label: "Contra Entry", link: "/transaction/contra-entry" },
+  // { label: "Transaction", link: "/transaction", icon: <SwapVerticalCircleTwoTone/>,
+  //   children: [
+  //     { label: "Receipts Entry", link: "/transaction/receipts-entry" },
+  //     { label: "Payment Entry", link: "/transaction/payment-entry" },
+  //     { label: "Contra Entry", link: "/transaction/contra-entry" },
     
-    ],
-  },
+  //   ],
+  // },
   { label: "Stock Reports", link: "/reports", icon: <AssessmentTwoTone/>,
     children: [
       { label: "Purchase Details", link: "/reports/purchase-details" },
@@ -65,18 +65,18 @@ const structure = [
       { label: "User Management", link: "/configuration/user" },
       { label: "Customers", link: "/configuration/customer" },
       { label: "Suppliers", link: "/configuration/supplier-entry"},
-      { label: "Account Group", link: "/configuration/account-group"},
-      { label: "Account Head", link: "/configuration/account-head"},
+      // { label: "Account Group", link: "/configuration/account-group"},
+      // { label: "Account Head", link: "/configuration/account-head"},
 
     ],
-  },
-  { label: "Accounts", link: "/account", icon: <AccountBalance />, 
-    children: [
+  }
+  // { label: "Accounts", link: "/account", icon: <AccountBalance />, 
+  //   children: [
  
-      { label: "Ledger Report", link: "/account/ledger-report" },
-      { label: "Cashflow", link: "/account/cashflow" },
-    ],
-  },
+  //     { label: "Ledger Report", link: "/account/ledger-report" },
+  //     { label: "Cashflow", link: "/account/cashflow" },
+  //   ],
+  // },
 ];
 
 

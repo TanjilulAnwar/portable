@@ -5,13 +5,13 @@ import cogoToast from 'cogo-toast';
 import {user_require} from './require';
 import checkValidation from 'util/checkValidation';
 import { DataSaving } from '../../loading/DataSaving';
-import { tradeList, postUserData } from 'pages/configuration/server_action';
+import { /*tradeList,*/ postUserData } from 'pages/configuration/server_action';
 
 
 // eslint-disable-next-line
 export default React.memo(({updateList, update, user_info, handleClose})=>{
   const [form_inputs, setFormInputs] = React.useState(update?{...user_info}:{status: true})
-  // const [trade_list, setTradeList] = React.useState([])
+  //  const [trade_list, setTradeList] = React.useState([])
   const [showPassword, setShowPassword] = React.useState(false)
   const [requires, setRequireFields] = React.useState({})
   const [saving, setSaving] = React.useState(false)
@@ -21,8 +21,8 @@ export default React.memo(({updateList, update, user_info, handleClose})=>{
     let req_obj = {...user_require}
     if(update){ delete req_obj.password }
     setRequireFields(req_obj)
-    tradeList()
-      .then(resp => resp.success /*&& setTradeList(resp.message)*/)
+    // tradeList()
+    //   .then(resp => resp.success && setTradeList(resp.message))
   // eslint-disable-next-line
   }, [])
   
