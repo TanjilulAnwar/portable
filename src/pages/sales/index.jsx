@@ -84,7 +84,7 @@ class Sales extends React.Component{
   render(){
     return(
       <div className="app-wrapper">
-        <h5 className="text-center font-weight-bold mb-3">Medicine Sales</h5>
+        <h5 className="text-center font-weight-bold mb-3">Sales</h5>
         <CustomerInfo
           form_inputs={this.state.form_inputs}
           handleInputs={this.handleInputs.bind(this)}
